@@ -1,0 +1,75 @@
+<app-progress-spinner *ngIf="showLoading"></app-progress-spinner>
+
+<div class="flexcontainer background">
+
+  <div class="smallitem">
+    <div class="signin-details">
+
+      <img class="customNavbarBrandLogin centeredElement" src="assets/logo/AM-logo-v2.svg">
+
+      <div class="centered loginBody">
+
+        <mat-card class="login-card">
+          <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width customInput">
+                    <input matInput placeholder="Email" required>
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      Email is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field class="example-full-width customInput">
+                    <input matInput placeholder="Password" type="password" name="password" required>
+                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                      Password is <strong>required</strong>
+                    </mat-error>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+          </form>
+
+          <div class="flexcontainer additionalActions">
+            <div class="halfCol">
+              <mat-checkbox>Remember me</mat-checkbox>
+            </div>
+            <div class="halfCol forgotPassDiv">
+              <span class="loginLink cursorPointer underlineHover forgotPass" (click)="goTo('forgot')">Forgot
+                password?</span>
+            </div>
+          </div>
+
+          <mat-card-actions>
+            <button class="centeredElement transparent-btn login-btn" mat-raised-button (click)="signin()">Sign
+              In</button>
+          </mat-card-actions>
+
+        </mat-card>
+      </div>
+
+    </div>
+
+    <div class="privTerms">
+
+      <div>
+        By logging in, you agree to Active Manager's <span class="loginLink cursorPointer underlineHover"
+          (click)="goTo('priv')">Privacy
+          Policy
+        </span> and <span class="loginLink cursorPointer underlineHover" (click)="goTo('terms')">Terms of Use</span>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bigitem"></div>
+
+</div>

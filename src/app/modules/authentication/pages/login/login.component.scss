@@ -1,0 +1,115 @@
+@import "../../../../stylesheets/reset";
+@import "../../../../stylesheets/buttons";
+
+// login__card
+
+// .my-btn {
+//     @extend .transparent-btn;
+// }
+
+.background {
+    background: url('/assets/loginBackground/loginBack.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    height:100vh;
+}
+
+.flexcontainer{
+    display: flex;
+}
+
+.bigitem {
+    flex: 2 0 0;
+    height: 100vh;
+}
+
+.smallitem {
+    display: flex;
+    flex: 1.5 0 0;
+    background-color: rgba(84, 8, 129, 0.64);
+    flex-direction: column;
+}
+
+.signin-details {
+    width: 500px;
+    padding: 30px;
+    margin: auto;
+}
+
+.customInput{
+    width: 400px;
+    margin-bottom:10px;
+    color:#CCCDCE;
+}
+
+.customInput:focus{
+    color:white;
+}
+
+.loginLink{
+    color: rgba(41,213,255,1);
+}
+
+.forgotPass{
+    font-size: 15px;
+}
+
+.forgotPassDiv{
+    text-align: right;
+}
+
+.halfCol{
+    width:50%;
+}
+
+.privTerms{
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    padding-bottom:20px;
+}
+
+.customNavbarBrandLogin {
+    height: 55px;
+    margin-bottom: 30px;
+}
+
+.centeredElement {
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}
+
+.login-card{
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.login-btn{
+    width:408px;
+}
+
+.additionalActions{
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 0px transparent inset;
+  transition: background-color 50000s ease-in-out 0s;
+}
