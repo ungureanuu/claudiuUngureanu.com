@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+
   {
     path: 'users',
     loadChildren: './modules/user/user.module#UserModule'
@@ -14,7 +15,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: './modules/authentication/auth.module#AuthModule'
-  }
+  },
+  { 
+    path: 'dashboard', 
+    loadChildren: './modules/dashboard/dashboard.module#DashboardModule' 
+  },
 ];
 
 @NgModule({
